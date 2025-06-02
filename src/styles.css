@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 261 100% 62%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 271 100% 34%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 198 100% 50%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border font-normal;
+    font-family: 'Satoshi Variable', 'Satoshi', Helvetica, Arial, sans-serif;
+  }
+  body {
+    @apply bg-[#fbfbff] text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Satoshi Variable', 'Satoshi', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('/fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2-variations');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('/fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('/fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('/fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.gradient-button {
+  background: linear-gradient(180deg, #A128FF 0%, #6100AD 100%);
+}
+
+.job-card-shadow {
+  box-shadow: 0px 0px 14px rgba(211, 211, 211, 0.15);
+}
+
+.nav-shadow {
+  box-shadow: 0px 0px 20px rgba(127, 127, 127, 0.15);
+}
+
+.logo-container {
+  background: linear-gradient(180deg, #FEFEFD 0%, #F1F1F1 100%);
+  box-shadow: 0px 0px 10.25px rgba(148, 148, 148, 0.25);
+}
+
+/* Custom styles for form elements */
+.form-input {
+  @apply w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+}
+
+.form-select {
+  @apply w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+}
+
+.form-textarea {
+  @apply w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[120px];
+}
